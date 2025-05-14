@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+
+
+.main-pages-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+}
+
+
+
+.container {
+    background: linear-gradient(135deg, #1c1c1c, #08463B);
+}
+
+@media (max-width:500px) {
+    .main-pages-wrapper {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width:400px) {
+    .main-pages-wrapper {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

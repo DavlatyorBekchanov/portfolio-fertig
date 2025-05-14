@@ -1,0 +1,152 @@
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    width: 100%;
+    height: 100px;
+    padding: 40px;
+
+    p {
+        color: white;
+        font-family: 'Fira Code';
+    }
+
+    a {
+        font-size: 20px;
+        font-family: 'Fira Code';
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.site-header-left {
+    display: flex;
+    gap: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        .dot {
+            opacity: 1;
+        }
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    position: relative;
+
+    .letter-d,
+    .letter-b {
+        font-size: 56px;
+
+        position: absolute;
+        top: -15px;
+        left: -12px;
+
+    }
+
+    .logo-svg path {
+        fill: #00856a; 
+        stroke: none;
+        transition: all 0.3s ease;
+    }
+
+    &:hover {
+        .logo-svg path {
+            fill: transparent;
+
+
+        }
+
+        stroke: #3dcfb6;
+
+        .logo-text {
+
+            color: transparent !important;
+        }
+
+        -webkit-text-stroke: 0.65px white;
+    }
+
+}
+
+.logo-text {
+    font-size: 32px;
+}
+
+.dot {
+    display: flex;
+    align-items: unset;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 8px;
+    font-size: 32px !important;
+    color: #3dcfb6 !important;
+}
+
+.menu-button {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    svg:hover {
+        cursor: pointer;
+    }
+}
+
+.menu-overlay {
+    position: absolute;
+    inset: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 230px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #3dcfb6;
+    border-radius: 1rem;
+    box-shadow: -2px 0px 6px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(45deg,
+            #1c1c1c 0%,
+            #1c1c1c 45%,
+            #08463b 70%,
+            #08463b 100%);
+    z-index: 101;
+}
+
+@media (max-width: 750px) {
+    .site-header-left {
+        display: none;
+    }
+
+    .name2 {
+        display: none;
+    }
+
+    .menu-button {
+        display: flex;
+    }
+}

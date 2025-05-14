@@ -1,0 +1,256 @@
+@import '../../../variables.scss';
+
+.contact-form-container {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    color: $primary-color;
+    font-family: $font-karla;
+    padding-top: 4rem;
+    background-color: #1c1c1c;
+
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+        gap: 5rem;
+    }
+}
+
+.contact-form-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 50%;
+    padding: 40px;
+
+    h2 {
+        font-size: 64px;
+        font-family: 'Fira Code';
+
+        @media (max-width: 900px) {
+            font-size: 48px;
+        }
+    }
+
+    > :nth-child(1),
+    > :nth-child(3) {
+        font-size: 24px;
+    }
+
+    > :nth-child(3) {
+        font-family: 'Fira Code';
+    }
+
+    > :nth-child(4),
+    > :nth-child(6) {
+        font-size: 16px;
+        color: white;
+
+        span {
+            color: $primary-color;
+        }
+    }
+
+    @media (max-width: 900px) {
+        width: 100%;
+    }
+}
+
+.contact-form-fields {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    font-family: 'Fira Code';
+    margin-top: 25px;
+
+    @media (max-width: 900px) {
+        width: 100%;
+        font-size: 20px;
+
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+
+    >label:not(:last-of-type) {
+        padding-left: 2rem;
+    }
+
+    > :nth-child(1),
+    > :nth-child(3),
+    > :nth-child(5),
+    > :nth-child(7) {
+        border-top: 1px solid $primary-color;
+        padding-top: 1.5rem;
+        width: 60%;
+
+        @media (max-width:900px) {
+            width: 100%;
+        }
+    }
+
+    .input-group {
+        position: relative;
+        padding-left: 2rem;
+        display: flex;
+
+        input,
+        textarea {
+            width: 60%;
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-family: $font-karla;
+            padding-left: 0.5rem;
+
+            &::placeholder {
+                color: white;
+                font-size: 18px;
+                font-family: $font-karla;
+
+                @media (max-width: 900px) {
+                    font-size: 16px;
+
+
+                }
+            }
+        }
+
+        textarea {
+            overflow: hidden;
+            resize: none;
+        }
+    }
+
+    .validation-message {
+        position: absolute;
+        bottom: 20px;
+        font-size: 18px;
+        color: #ec9999;
+
+        @media (max-width: 900px) {
+            font-size: 12px;
+        }
+    }
+
+    .checkbox-wrapper {
+        display: flex;
+        font-size: 16px;
+        gap: 0.5rem;
+        padding-bottom: 1.5rem;
+        align-items: center;
+        position: relative;
+
+        .checkbox {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+
+            &:checked+.checkbox-custom::after {
+                display: block;
+            }
+        }
+
+        .checkbox-custom {
+            position: relative;
+            min-height: 18px;
+            min-width: 18px;
+            background-color: transparent;
+            border: 2px solid $primary-color;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: none;
+                left: 4px;
+                top: 0px;
+                width: 4px;
+                height: 8px;
+                border: solid $primary-color;
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+            }
+        }
+
+        p {
+            color: white;
+        }
+    }
+
+    .submit-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            cursor: pointer;
+            border: 1px solid white;
+            border-radius: 1.5rem;
+            align-self: center;
+            padding: 0.5rem 1rem;
+            width: fit-content;
+            background-color: transparent;
+            color: white;
+
+            p {
+                text-shadow: 0 0 1px $primary-color, 29ch 0 1px $primary-color;
+                font-family: $font-karla;
+                font-size: 18px;
+            }
+
+            &:disabled {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+
+            &:not(:disabled):hover {
+                border-color: $primary-color;
+                color: transparent;
+                transition: border-color 1s ease-in-out;
+
+                p {
+                    transition: text-shadow 4s ease-in-out;
+                    animation: moveButtonText 2s linear infinite;
+                }
+            }
+        }
+
+
+
+        .success-feedback {
+            position: absolute;
+            bottom: 45px;
+            color: yellow;
+            font-size: 18px;
+        }
+    }
+}
+
+@keyframes moveButtonText {
+    to {
+        text-shadow: -29ch 0 1px $primary-color, 0ch 0 1px $primary-color;
+    }
+}
+
+@media(max-width:500px) {
+    contact-form-text {
+        h2 {
+            font-size: 44px;
+        }
+    }
+
+    .checkbox-wrapper {
+        padding: 20px;
+    }
+}

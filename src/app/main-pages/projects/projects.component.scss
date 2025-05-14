@@ -1,0 +1,25 @@
+.projects {
+    color: #3dcfb6;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 64px 0 64px 0;
+    background-color: #1c1c1c;
+    padding-left: 60px;
+
+    h2 {
+        font-family: 'Fira Code';
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 500px) {
+    .projects {
+
+
+        h2 {
+            font-size: 44px;
+            overflow-wrap: break-word;
+
+        }
+    }
+}

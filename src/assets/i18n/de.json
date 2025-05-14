@@ -1,0 +1,95 @@
+{
+"header":{
+    "aboutMe": "Über mich",
+     "projects": "Projekte",
+    "skills": "Fähigkeiten"
+},
+
+"web":{
+"developer": "Frontend Entwickler"
+},
+"check":{
+    "work":"Meine Projekte",
+    "contact": "Kontakt"
+ },
+"mystory": {
+    "iam": "Wer ich bin",
+    "aboutme": "Über mich",
+    "germanspeak": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Dillingen an der Donau. Ich entwickle gerne visuell ansprechende und benutzerfreundliche Websites und Anwendungen. Die sich ständig weiterentwickelnde IT-Welt motiviert mich, und ich liebe es, neue Technologien zu lernen, um auf dem neuesten Stand zu bleiben.",
+    "workFlexi": "Ich bin flexibel, was Arbeitsumgebungen angeht. Ob vor Ort in Dillingen an der Donau oder remote – ich passe mich leicht an und arbeite effizient in verschiedenen Umfeldern. Zusammenarbeit und klare Kommunikation sind mir wichtig, unabhängig davon, wo ich arbeite.",
+    "mindset": "Ich bin offen für Neues und suche ständig nach Möglichkeiten, meine Fähigkeiten zu verbessern.",
+    "mindset2": "Ich nehme gerne Herausforderungen an, die mich sowohl beruflich als auch persönlich wachsen lassen.",
+    "quality": "Programmieren bedeutet für mich mehr als nur Code zu schreiben – es geht darum, die besten Lösungen für Probleme zu finden. Ich konzentriere mich darauf, komplexe Ideen in einfache und effektive Lösungen umzuwandeln, die Nutzern und Unternehmen helfen, ihre Ziele zu erreichen. Ich bin immer offen für spannende Projekte und neue Möglichkeiten. Lassen Sie uns in Kontakt treten!"
+  },
+  "reference":{
+    "kollege":"Was meine  Kollegen über mich sagen"
+ },
+  "skillset": {
+    "tech": "Technologien",
+    "set": "Fähigkeiten",
+    "intro": "Ich bin ein leidenschaftlicher Frontend-Entwickler mit Erfahrung in verschiedenen modernen Webtechnologien. Ich habe umfassend mit HTML, CSS, JavaScript und Frameworks wie Angular gearbeitet. Mein Fokus liegt auf der Erstellung intuitiver und reaktionsschneller Benutzeroberflächen bei gleichzeitig nahtlosen Nutzererlebnissen. Ich bin stets bereit, neue Technologien zu lernen und mich anzupassen, denn ich bin überzeugt, dass es entscheidend ist, mit der schnellen Entwicklung der Webtechnologie Schritt zu halten. Neue Trends und bewährte Methoden zu erkunden hilft mir, meine Fähigkeiten zu verbessern und in der Branche voraus zu bleiben.",
+    "need": "Du brauchst",
+    "anoth": "weitere Fähigkeiten?",
+    "closing": "Kontaktiere mich gerne! Ich freue mich darauf, mein Wissen zu erweitern und zu spannenden neuen Projekten beizutragen.",
+    "talk": "Lass uns sprechen",
+    "interest": "Ich interessiere mich besonders dafür, Neues zu lernen"
+  },
+  "port": {
+    "folio": "Portfolio",
+    "featur": "Ausgewählte Projekte",
+    "intro": "Entdecke einige meiner Projekte hier – interagiere mit ihnen <br>, um meine Fähigkeiten direkt zu erleben."
+  },
+  "popup": {
+    "what": "Worum geht es in diesem Projekt?",
+    "description01": "Task-Manager inspiriert vom Kanban-System. Aufgaben erstellen und organisieren mit Drag-and-Drop-Funktionen, Benutzer und Kategorien zuweisen.",
+    "description02": "Polo-Loco ist ein Spiel, das mit objektorientierter Programmierung (OOP) entwickelt wurde, bei dem es darum geht, Münzen zu sammeln, Küken und Hühner zu besiegen und schließlich den Endgegner zu schlagen",
+    "description03": "Das Pokodex-Projekt wurde mit einer API erstellt, wobei Spielkarten über die API geladen und anschließend mit JavaScript programmiert und angezeigt werden.",
+    "nextProject": "Nächstes Projekt"
+  },
+  "contact": {
+    "me": "Kontaktiere mich",
+    "lets": "Lass uns zusammen- <br> arbeiten",
+    "solve": "Du hast ein Problem zu lösen?",
+    "action": "Ermutige die Leute, dich zu kontaktieren und erkläre, für welche Rolle du dich interessierst. Zeige, wie du durch deine Arbeit einen Mehrwert für ihre Projekte schaffen kannst.",
+    "headline": "Du brauchst einen Frontend-Entwickler? <span>Lass uns sprechen!</span>",
+    "name": "Wie heißt du?",
+    "help": "Wobei kann ich dir helfen?",
+    "email1": "Wie lautet deine E-Mail-Adresse?",
+    "privarcy": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten gemäß dieser zu.",
+    "warning": {
+      "name": "Hoppla! Dein Name fehlt",
+      "email": "Ups! Deine E-Mail-Adresse ist erforderlich",
+      "message": "Was möchtest du entwickeln?",
+      "success": "Nachricht erfolgreich gesendet"
+    },
+    "hello": "Sag Hallo :)"
+  },
+  "reviews": {
+    "alice": {
+      "name": "Alice Johnson",
+      "role": "Entwicklerin",
+      "text": "Ich hatte die Gelegenheit, mit Davlat an einigen Projekten zu arbeiten. Er ist zuverlässig, kommuniziert klar und behält stets das große Ganze im Blick. Die Zusammenarbeit mit ihm war sehr angenehm."
+    },
+    "omer": {
+      "name": "Omer Faruqi",
+      "role": "Teamkollege",
+      "text": "Davlat bringt positive Energie ins Team. Er lernt neue Tools schnell und geht professionell mit Feedback um. Ein zuverlässiger Teamplayer, auf den man zählen kann."
+    },
+    "charlie": {
+      "name": "Charlie Rose",
+      "role": "Entwickler",
+      "text": "Die Zusammenarbeit mit Davlat war unkompliziert und effektiv. Er geht verantwortungsbewusst an Aufgaben heran und bleibt selbst bei engen Deadlines ruhig. Ich würde jederzeit wieder mit ihm arbeiten."
+    }
+  },
+  "footer":{
+    "legal": "Impressum"
+  }
+
+
+
+
+
+
+
+
+}

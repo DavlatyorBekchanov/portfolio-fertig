@@ -1,0 +1,47 @@
+<div class="maincontainer-skill">
+
+    <div>
+        <p class="technolog"> {{"skillset.tech" | translate}} </p>
+        <div class="skill-set">
+            <div class="text-skill">
+                <h2 class="set-h2" [innerHTML]="'skillset.set' | translate">
+                </h2>
+                <p> {{"skillset.intro" | translate}}
+                    <br><br>
+                    <span
+                        style="font-size: 24px; font-family: 'Fira Code'; font-weight: 700; margin-right: 15px;">{{"skillset.need"
+                        | translate}}</span> <span
+                        style="font-family: 'Fira Code'; font-size: 24px; font-weight: 700; color: #3dcfb6;">{{"skillset.anoth"
+                        | translate}}</span> <br> <br> <span
+                        style="font-family: 'Karla'; font-weight: 400; line-height: 120%;">{{"skillset.closing" |
+                        translate}}
+                    </span>
+                </p>
+                <button (click)="scrollToContact()">
+                    <span class="rotateText">{{"skillset.talk" | translate}}</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="right-panel">
+        <div class="skills-grid">
+
+
+            <div class="skill" *ngFor="let skill of skills" [class.growth-mindset]="skill.name === 'GrowthMindset'">
+                <img [src]="skill.icon" alt="">
+                <p [innerHTML]="skill.name"></p>
+                <div class="tooltip" *ngIf="skill.name ==='GrowthMindset'">
+                    <p>{{"skillset.interest" | translate}}</p>
+                    <div class="icons">
+                        <img src="assets/img/skills/vuejs.webp" alt="">
+                        <img src="assets/img/skills/react.webp" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>

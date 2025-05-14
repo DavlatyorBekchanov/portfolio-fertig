@@ -1,0 +1,36 @@
+<div class="project-container">
+    <div class="project-list">
+        @for (project of featuredProjects;let index = $index; let last = $last;
+        track project){
+        <div [ngStyle]="{ 'border-bottom': last ? borderColor : '' }" [ngClass]="{
+        'project-item': project.active,
+        'coming-soon': !project.active
+      }" (click)="openProjectModal(index)" (mouseenter)="onProjectHover(project)"
+            (mouseleave)="onProjectLeave(project)">
+            <div class="project-title">
+                <p>{{ project.projectName }}</p>
+                <img src="assets/img/arrow.png" alt="" />
+            </div>
+            <div class="project-tech">
+                @for (tech of project.technologyUsed; let last = $last; track tech ){
+                <p>{{ tech.technology }}</p>
+                @if(!last){
+                <div>|</div>
+                } }
+            </div>
+        </div>
+        }
+    </div>
+    <div class="project-preview">
+        @for (project of featuredProjects; let first = $first; let last = $last; let
+        index = $index; track project){ @if(project.hover){
+        <div [style.top.px]="first ? 0 : null" [style.top.px]="!first && !last ? 50 + (index - 1) * 100 : null"
+            [style.bottom.px]="last ? 0 + 200 : null" class="preview-image">
+            <img class="preview-background" src="assets/img/Capa_1.png" alt="" />
+            <img src="{{ project.imgProject }}" alt="" />
+        </div>
+        } }
+    </div>
+    <app-modal-window *ngIf="selectedProject" [popupProject]="selectedProject" (closeDialog)="closeProjectModal($event)"
+        (nextProject)="showNextProject()" #popupContainer></app-modal-window>
+</div>

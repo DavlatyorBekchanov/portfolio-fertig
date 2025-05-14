@@ -1,0 +1,78 @@
+<div id="contactForm" class="contact-form-container">
+    <div class="contact-form-text">
+        <p>{{"contact.me" | translate}}</p>
+        <h2 [innerHTML]="'contact.lets' | translate"></h2>
+        <p>{{"contact.solve" | translate}}</p>
+        <p> {{"contact.action" | translate }} </p>
+        <br />
+        <p [innerHTML]="'contact.headline' | translate">
+
+        </p>
+    </div>
+
+    <div class="contact-form-fields">
+        <form class="contact-form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+            <!-- Name -->
+            <label for="name">
+                <p>{{"contact.name" | translate}}</p>
+            </label>
+            <div class="input-group">
+                <input [(ngModel)]="formData.name" name="name" id="name" required minlength="2" #nameModel="ngModel"
+                    (blur)="!nameModel.valid ? (showSuccessMessage= true) : ''" placeholder="Your name goes here" />
+                <div *ngIf="showSuccessMessage && nameModel.invalid && nameModel.touched" class="validation-message">
+                    {{ 'contact.warning.name' | translate }}
+                </div>
+            </div>
+
+            <!-- Email -->
+            <label for="email">
+                <p></p>
+            </label>
+            <div class="input-group">
+                <input [(ngModel)]="formData.email" name="email" id="email" type="email" required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #emailModel="ngModel"
+                    (blur)="!emailModel.valid ? (showSuccessMessage = true) : ''" placeholder="youremail@mail.com" />
+                <div *ngIf="showSuccessMessage && emailModel.invalid && emailModel.touched" class="validation-message">
+                    {{ 'contact.warning.email' | translate }}
+                </div>
+            </div>
+
+            <!-- Message -->
+            <label for="message">
+                <p>{{"contact.help" | translate}}</p>
+            </label>
+            <div class="input-group">
+                <textarea [(ngModel)]="formData.message" name="message" id="message" rows="3" required minlength="5"
+                    #messageModel="ngModel" (blur)="!messageModel.valid ? (showSuccessMessage = true) : ''"
+                    placeholder="Hello Davlat, I am interested in..."></textarea>
+                <div *ngIf="showSuccessMessage && messageModel.invalid && messageModel.touched"
+                    class="validation-message">
+                    {{ 'contact.warning.message' | translate }}
+                </div>
+            </div>
+
+            <!-- Privacy checkbox -->
+            <label class="checkbox-wrapper">
+                <input class="checkbox" type="checkbox" name="privacyPolicy" [(ngModel)]="privacyAccepted" />
+                <span class="checkbox-custom"></span>
+                <p>{{"contact.privarcy" | translate}}</p>
+            </label>
+
+            <!-- Submit button -->
+            <div class="submit-wrapper">
+                <button type="submit" [disabled]="
+            !privacyAccepted ||
+            nameModel.invalid ||
+            emailModel.invalid ||
+            messageModel.invalid
+          ">
+                    <span>{{"contact.hello" | translate}} </span>
+                </button>
+
+                <div *ngIf="showSuccessMessage" class="success-feedback">
+                    <p>{{"contact.warning.success" | translate}}</p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<svg width="300" height="40" viewBox="0 0 300 40" xmlns="http://www.w3.org/2000/svg">
+  
+  <g fill="#3DCFB6">
+    <path d="M10 20 L290 20 M20 10 L30 30 M30 10 L20 30" />
+  </g>
+
+ 
+  <text id="emailText" x="10" y="25" font-size="16" fill="white" font-family='Karla'>
+    davlatyor.bekchanov@gmail.com
+  </text>
+
+ 
+  <style>
+    text {
+      transition: fill 0.3s ease-in-out;
+      fill: white; 
+    }
+    text:hover {
+      fill: #3DCFB6; 
+    }
+  </style>
+</svg> 
+

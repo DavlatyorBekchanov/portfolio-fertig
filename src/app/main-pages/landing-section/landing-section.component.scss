@@ -1,0 +1,355 @@
+@import "../../../variables.scss";
+
+.main-section {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto;
+    width: 100%;
+    height: calc(100vh - 100px);
+
+    background: linear-gradient(135deg, #1c1c1c, #08463B);
+    color: white;
+    position: relative;
+    padding: 0 1rem;
+    overflow: hidden;
+}
+
+.left-lateral {
+    display: flex;
+    justify-content: unset;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 26rem;
+    padding-bottom: 16px;
+
+    img {
+        width: 30px;
+        height: 48px
+    }
+}
+
+.developer {
+    @include dflex;
+    flex-direction: column;
+    font-family: 'Karla';
+    text-align: center;
+    gap: 1.5rem;
+    // transform: translateY(200px);
+    // margin-top: 150px;
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2 {
+        font-family: 'Fira Code';
+        font-size: 40px;
+        color: #d9d9d9;
+    }
+
+    button {
+        border-radius: 100px;
+        border: 1px solid #ffffff;
+        background-color: transparent;
+        padding-left: 24px;
+        padding-right: 24px;
+        margin: 10px;
+        color: white;
+        font-size: 18px;
+        font-weight: 400;
+        height: 48px;
+        cursor: pointer;
+        overflow: hidden;
+
+        span {
+            display: inline-block;
+            font-family: 'Karla';
+            // text-shadow: 0 0 1px #3dcfb6, 32ch 0 1px #3dcfb6;
+            transition: transform 0.6s ease;
+        }
+
+        &:hover .rotating-text {
+            animation: rotateText 2s ease infinite;
+            white-space: nowrap;
+            color: #3dcfb6;
+        }
+
+        &:hover {
+            border-color: #3dcfb6;
+
+            transition: border-color 1s ease-in-out;
+
+        }
+
+
+    }
+}
+
+
+
+@keyframes rotateText {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-150%);
+    }
+
+    51% {
+        transform: translateX(500%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.right-lateral {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Karla';
+    padding: 14rem 0 1rem 0rem;
+    /* Ikonkalar orasida masofa qo‘shish */
+    // justify-content: flex-end;
+    // align-items: flex-end;
+    // position: absolute;
+    // top: 420px;
+    // right: 96px;
+    gap: 16px;
+
+    a {
+        width: 100%;
+        width: 32px;
+        height: 32px;
+    }
+
+    :hover {
+        color: $primary-color ;
+        cursor: pointer;
+    }
+
+    img {
+        object-fit: cover;
+    }
+
+    .fullMail {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        width: auto;
+        display: inline-block;
+        padding: 5px;
+
+    }
+
+    .mail {
+        display: none;
+    }
+
+    .line {
+        background-color: #ffffff;
+        height: 186px;
+        width: 1px;
+        margin: 0 auto;
+
+    }
+}
+
+.slider {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 56px;
+    background-color: rgba(55, 58, 57, 0.7);
+    width: 100%;
+    height: 62px;
+    padding: 12px 32px;
+    margin-top: auto;
+    overflow: hidden;
+    color: $primary-color;
+    transform: rotate(-3deg);
+    font-size: 32px;
+    font-weight: 400;
+    white-space: nowrap;
+
+    .slider-content {
+        display: flex;
+        gap: 56px;
+        animation: slider-marquee 10s linear infinite;
+        font-family: 'Karla', Arial, Helvetica, sans-serif;
+    }
+}
+
+@keyframes slider-marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+
+    100% {
+        transform: translateX(-100%);
+    }
+
+}
+
+@media (max-width:768px) and (min-width:700px) {
+    .developer {
+        h1 {
+            font-size: 62px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .mail {
+        display: unset !important;
+    }
+
+    .fullMail {
+        display: none !important;
+    }
+
+    .developer {
+        display: flex;
+
+        h1 {
+            font-size: 62px;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+    }
+
+    .main-section {
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: auto auto;
+    }
+
+    .developer {
+        grid-column: 1 / 4;
+        grid-row: 1;
+    }
+
+    .left-lateral {
+        grid-column: 1;
+        grid-row: 2;
+        padding: unset;
+        padding-bottom: 1rem;
+    }
+
+    .right-lateral {
+        grid-column: 3;
+        grid-row: 2;
+        padding: unset;
+        padding-bottom: 1rem;
+    }
+
+
+
+}
+
+/* Mobile breakpoint */
+@media (max-width: 550px) {
+
+
+    .developer {
+        // position: relative;
+        // top: -200px;
+        // left: 0;
+        // padding: 0 16px;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            font-size: 40px;
+
+        }
+    }
+
+    .buttons {
+        button {
+            min-width: 100px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .developer {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto;
+    }
+}
+
+// ipadlar uchun 
+@media (max-width: 1024px) and (min-width: 768px) {
+    .main-section {
+        grid-template-columns: auto 1fr auto;
+        height: auto; // yoki 90vh agar kerak bo‘lsa
+        padding: 1rem;
+    }
+
+    .left-lateral {
+        transform: translateY(250px);
+    }
+
+    .developer {
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        button {
+            font-size: 1rem;
+        }
+    }
+
+    .left-lateral,
+    .right-lateral {
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-section {
+        grid-template-columns: 10px 1fr 10px;
+        padding: 1rem 0;
+        height: auto;
+        overflow: hidden;
+    }
+
+    .right-lateral {
+        transform: translateX(-12px);
+    }
+
+    .developer h1 {
+        font-size: 28px;
+    }
+
+    .developer h2 {
+        font-size: 16px;
+    }
+
+    .right-lateral,
+    .left-lateral {
+        padding: 1rem 0;
+        gap: 0.5rem;
+    }
+
+    .slider {
+        font-size: 18px;
+        height: 48px;
+    }
+}

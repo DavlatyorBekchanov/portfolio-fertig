@@ -1,0 +1,94 @@
+.footer-container {
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 126px;
+    overflow: hidden;
+    font-family: 'Karla';
+
+
+
+    .developer {
+        color: white;
+        font-family: 'Karla';
+        font-weight: 400;
+        font-size: 16px;
+        padding: 40px;
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
+    }
+
+    .logo-1 {
+        margin-bottom: 20px;
+
+
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .container-links {
+        color: white;
+        padding-right: 40px;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+        /* Bir ustun */
+        gap: 20px;
+        text-align: center;
+
+        .developer {
+            font-size: 14px;
+            padding: 10px;
+        }
+
+        .logo-1 {
+            width: 50px;
+            height: 50px;
+        }
+
+        .container-links {
+            font-size: 14px;
+
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+        .developer {
+            font-size: 12px;
+            padding: 10px;
+        }
+
+        .logo-1 {
+            width: 40px;
+            height: 40px;
+        }
+
+        .container-links {
+            font-size: 12px;
+
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+}

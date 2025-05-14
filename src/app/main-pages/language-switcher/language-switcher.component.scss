@@ -1,0 +1,45 @@
+.language-switcher {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 32px;
+    border: 1px solid #3dcfb6;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: transparent;
+
+    div {
+        display: flex;
+        width: 50%;
+        height: 100%;
+        transition: background-color 0.3s, color 0.3s;
+        padding: 4px;
+
+        p {
+            font-size: 16px;
+            font-family: 'Fira Code';
+            margin: 0;
+        }
+    }
+}
+
+.language-active {
+    background-color: #3dcfb6;
+    border-radius: 0.8rem;
+
+
+    p {
+        color: white;
+    }
+}
+
+.language-inactive {
+    background-color: transparent;
+
+    p {
+        color: #3dcfb680;
+    }
+}

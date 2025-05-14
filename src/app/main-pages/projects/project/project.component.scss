@@ -1,0 +1,124 @@
+.project-container {
+    display: flex;
+    width: 100%;
+    padding-top: 32px;
+    gap: 64px;
+    position: relative;
+}
+
+.project-list {
+    width: 100%;
+    position: relative;
+}
+
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Fira Code', Arial, Helvetica, sans-serif;
+    height: 100px;
+    border-top: 1px solid #3dcfb6;
+    color: white;
+    padding: 0 16px 0 16px;
+}
+
+.project-item:hover {
+    background-color: #2f5b54;
+    cursor: pointer;
+}
+
+.project-title {
+    display: flex;
+    gap: 8px;
+
+    img {
+        display: none;
+        object-fit: cover;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.project-item:hover img {
+    display: unset;
+}
+
+.project-tech {
+    font-size: 18px;
+    font-family: 'Karla', Arial, Helvetica, sans-serif;
+    display: flex;
+    gap: 8px;
+
+    & div {
+        color: #3dcfb6;
+    }
+}
+
+.project-preview {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+
+    img {
+        position: absolute;
+        width: 400px;
+        height: 200px;
+        border-radius: 1rem;
+    }
+}
+
+.preview-background {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+.preview-image {
+    position: absolute;
+}
+
+@media (max-width:1200px) {
+    .project-container {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width:1100px) {
+    .project-preview {
+        display: none;
+    }
+}
+
+@media (max-width:700px) {
+    .project-item {
+        flex-direction: column;
+        justify-content: center;
+        height: 125px;
+        gap: 16px;
+        padding: unset;
+    }
+
+    .project-title {
+        width: 100%;
+        justify-content: flex-start;
+        font-size: 24px;
+        font-family: 'Fira Code';
+    }
+
+    .project-tech {
+        display: none;
+    }
+
+    .project-container {
+        padding: 30px;
+        margin-right: 30px;
+    }
+}
+
+@media(max-width:400px) {
+    .project-container {
+        padding: 20px;
+        margin-right: 20px;
+    }
+}

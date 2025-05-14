@@ -1,0 +1,10 @@
+$primary-color: #3dcfb6;
+$dark-background: #1c1c1c;
+$bg-dark-teal: #08463b;
+$font-karla: "Karla", Arial, Helvetica, sans-serif;
+
+@mixin dflex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
