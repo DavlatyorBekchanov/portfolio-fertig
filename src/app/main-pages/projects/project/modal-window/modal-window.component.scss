@@ -1,12 +1,11 @@
-
 .project-modal-overlay {
     display: flex;
     background-color: rgba(#000000, 0.5);
-    width: 100%;
-    position: fixed;
-    height: auto;
+    position: absolute;
+    height: 100vh;
     top: 0;
-    left: 0;
+    left: 20px;
+   
     z-index: 1000;
 }
 

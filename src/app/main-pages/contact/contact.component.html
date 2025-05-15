@@ -18,7 +18,7 @@
             </label>
             <div class="input-group">
                 <input [(ngModel)]="formData.name" name="name" id="name" required minlength="2" #nameModel="ngModel"
-                    (blur)="!nameModel.valid ? (showSuccessMessage= true) : ''" placeholder="Your name goes here" />
+                    placeholder="Your name goes here" />
                 <div *ngIf="showSuccessMessage && nameModel.invalid && nameModel.touched" class="validation-message">
                     {{ 'contact.warning.name' | translate }}
                 </div>
@@ -31,7 +31,7 @@
             <div class="input-group">
                 <input [(ngModel)]="formData.email" name="email" id="email" type="email" required
                     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #emailModel="ngModel"
-                    (blur)="!emailModel.valid ? (showSuccessMessage = true) : ''" placeholder="youremail@mail.com" />
+                    placeholder="youremail@mail.com" />
                 <div *ngIf="showSuccessMessage && emailModel.invalid && emailModel.touched" class="validation-message">
                     {{ 'contact.warning.email' | translate }}
                 </div>
@@ -43,8 +43,7 @@
             </label>
             <div class="input-group">
                 <textarea [(ngModel)]="formData.message" name="message" id="message" rows="3" required minlength="5"
-                    #messageModel="ngModel" (blur)="!messageModel.valid ? (showSuccessMessage = true) : ''"
-                    placeholder="Hello Davlat, I am interested in..."></textarea>
+                    #messageModel="ngModel" placeholder="Hello Davlat, I am interested in..."></textarea>
                 <div *ngIf="showSuccessMessage && messageModel.invalid && messageModel.touched"
                     class="validation-message">
                     {{ 'contact.warning.message' | translate }}

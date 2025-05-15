@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -10,7 +10,9 @@ import { TranslateModule } from '@ngx-translate/core';
   encapsulation: ViewEncapsulation.None,
 })
 export class FooterComponent {
+  constructor(private router: Router) {}
+
   openPrivacyPolicy() {
-    window.open('/privarcy-policy', '_blank');
+    this.router.navigate(['/privarcy-policy']);
   }
 }

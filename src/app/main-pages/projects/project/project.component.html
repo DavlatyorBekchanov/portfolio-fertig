@@ -31,6 +31,6 @@
         </div>
         } }
     </div>
-    <app-modal-window *ngIf="selectedProject" [popupProject]="selectedProject" (closeDialog)="closeProjectModal($event)"
-        (nextProject)="showNextProject()" #popupContainer></app-modal-window>
+    <app-modal-window *ngIf="selectedProject" [projectData]="selectedProject" (dialogClosed)="closeProjectModal($event)"
+        (nextClicked)="showNextProject()" #popupContainer></app-modal-window>
 </div>
