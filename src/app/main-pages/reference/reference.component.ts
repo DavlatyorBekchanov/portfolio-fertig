@@ -3,7 +3,6 @@ import { NgClass, NgStyle, NgFor, CommonModule } from '@angular/common';
 import { Renderer2 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
-
 @Component({
   selector: 'app-reference',
   standalone: true,
@@ -26,10 +25,8 @@ export class ReferenceComponent implements OnInit {
   leftClicked = false;
   rightClicked = false;
   reset = false;
-  isAnimating = false;
 
   reviews: any[] = [];
-
   ngOnInit() {
     this.translate
       .get([
@@ -61,91 +58,65 @@ export class ReferenceComponent implements OnInit {
             text: translations['reviews.charlie.text'],
           },
         ];
-        // Initialize dot colors
-        this.updateDotColorByIndex(this.activeIndex);
       });
   }
-
   moveLeft() {
-    if (this.isAnimating) return;
-
-    this.isAnimating = true;
-    this.leftClicked = true;
-    this.rightClicked = false;
-    this.reset = false;
-
-    // Update index with proper looping
-    this.activeIndex =
-      (this.activeIndex - 1 + this.reviews.length) % this.reviews.length;
-
-    this.updateDotColorByIndex(this.activeIndex);
-
-    // Reset animation flags after transition
-    setTimeout(() => {
-      this.leftClicked = false;
+    if (this.rightClicked) {
       this.rightClicked = false;
-      this.isAnimating = false;
-    }, 300);
+      this.reset = true;
+      this.updateDotColor('dotMiddle');
+    } else if (!this.rightClicked && this.reset) {
+      this.reset = false;
+      this.leftClicked = true;
+      this.updateDotColor('dotLeft');
+    } else if (!this.leftClicked && !this.rightClicked && !this.reset) {
+      this.leftClicked = true;
+      this.updateDotColor('dotLeft');
+    }
+    if (this.activeIndex > 0) {
+      this.activeIndex--;
+    }
   }
 
   moveRight() {
-    if (this.isAnimating) return;
-
-    this.isAnimating = true;
-    this.rightClicked = true;
-    this.leftClicked = false;
-    this.reset = false;
-
-    // Update index with proper looping
-    this.activeIndex = (this.activeIndex + 1) % this.reviews.length;
-
-    this.updateDotColorByIndex(this.activeIndex);
-
-    // Reset animation flags after transition
-    setTimeout(() => {
+    if (this.leftClicked) {
       this.leftClicked = false;
-      this.rightClicked = false;
-      this.isAnimating = false;
-    }, 300);
+      this.reset = true;
+      this.updateDotColor('dotMiddle');
+    } else if (!this.leftClicked && this.reset) {
+      this.reset = false;
+      this.rightClicked = true;
+      this.updateDotColor('dotRight');
+    } else if (!this.leftClicked && !this.rightClicked && !this.reset) {
+      this.rightClicked = true;
+      this.updateDotColor('dotRight');
+    }
+    if (this.activeIndex < this.reviews.length - 1) {
+      this.activeIndex++;
+    }
   }
 
   selectDot(index: number, dotName: string) {
-    if (this.isAnimating || index === this.activeIndex) return;
-
-    this.isAnimating = true;
-    const previousIndex = this.activeIndex;
+    this.updateDotColor(dotName);
     this.activeIndex = index;
-
-    if (index < previousIndex) {
-      this.leftClicked = true;
-      this.rightClicked = false;
-    } else {
-      this.rightClicked = true;
-      this.leftClicked = false;
-    }
-
-    this.updateDotColorByIndex(index);
-
-    // Reset animation flags after transition
-    setTimeout(() => {
-      this.leftClicked = false;
-      this.rightClicked = false;
-      this.isAnimating = false;
-    }, 300);
+    this.leftClicked = dotName === 'dotLeft';
+    this.rightClicked = dotName === 'dotRight';
+    this.reset = dotName === 'dotMiddle';
   }
 
-  updateDotColorByIndex(index: number) {
+  updateDotColor(dot: string) {
     this.clearDotColors();
-    const dotRefs = [this.dotLeft, this.dotMiddle, this.dotRight];
-    const selectedDot = dotRefs[index];
-
-    if (selectedDot) {
-      this.renderer.setStyle(
-        selectedDot.nativeElement,
-        'background-color',
-        '#3dcfb6'
-      );
-    }
+    const selectedDot =
+      dot === 'dotLeft'
+        ? this.dotLeft
+        : dot === 'dotMiddle'
+        ? this.dotMiddle
+        : this.dotRight;
+    this.renderer.setStyle(
+      selectedDot.nativeElement,
+      'background-color',
+      '#3dcfb6'
+    );
   }
 
   clearDotColors() {

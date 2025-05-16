@@ -25,19 +25,11 @@ $font-karla: 'Karla', sans-serif;
     gap: 3rem;
     justify-content: center;
     position: relative;
-    width: 100%;
-    height: 300px;
-    overflow: visible;
-    padding: 0 100px;
+
 }
 
 .testimonial {
-    transition: all 0.3s ease-in-out;
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
 }
 
 .active {
@@ -54,9 +46,6 @@ $font-karla: 'Karla', sans-serif;
     padding: 2rem;
     min-width: 750px;
     height: 250px;
-    z-index: 2;
-    transform: translateX(0);
-    opacity: 1;
 }
 
 .not-active {
@@ -74,17 +63,7 @@ $font-karla: 'Karla', sans-serif;
     height: 250px;
     opacity: 0.6;
     scale: 0.95;
-    z-index: 1;
-}
-
-.testimonial:not(.active) {
-    &:nth-child(1) {
-        transform: translateX(-85%);
-    }
-
-    &:nth-child(3) {
-        transform: translateX(85%);
-    }
+    filter: blur(2.5px);
 }
 
 .review-text {
@@ -122,20 +101,15 @@ $font-karla: 'Karla', sans-serif;
 }
 
 .move-left {
-    transform: translateX(-100%);
-    opacity: 0;
-    pointer-events: none;
+    transform: translateX(798px);
 }
 
 .move-right {
-    transform: translateX(100%);
-    opacity: 0;
-    pointer-events: none;
+    transform: translateX(-798px);
 }
 
 .reset-position {
-    transform: translateX(0);
-    opacity: 1;
+    transform: translateX(0px);
 }
 
 .slider-controls {
@@ -181,22 +155,29 @@ $font-karla: 'Karla', sans-serif;
     .carousel {
         gap: clamp(0.5rem, 2vw, 3rem);
         align-items: center;
-        padding: 0 50px;
     }
 
     .active,
     .not-active {
         min-width: clamp(280px, 80vw, 750px);
         height: 350px;
-    }
 
-    .testimonial:not(.active) {
-        &:nth-child(1) {
-            transform: translateX(-90%);
+        .review-text {
+            margin: auto;
+            text-align: center;
         }
 
-        &:nth-child(3) {
-            transform: translateX(90%);
+        .review-footer {
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .line {
+                width: 100%;
+            }
+
+            p {
+                text-align: center;
+            }
         }
     }
 
