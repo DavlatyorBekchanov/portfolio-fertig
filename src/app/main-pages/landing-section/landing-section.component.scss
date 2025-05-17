@@ -15,6 +15,13 @@
     overflow: hidden;
 }
 
+.stroke {
+    background-color: #3dcfb6;
+    border: none;
+    height: 100%;
+    width: 1px;
+}
+
 .left-lateral {
     display: flex;
     justify-content: unset;
@@ -35,7 +42,7 @@
     font-family: 'Karla';
     text-align: center;
     gap: 1.5rem;
-    
+
 
     h1 {
         font-size: 8rem;
@@ -120,7 +127,7 @@
     color: white;
     font-family: 'Karla';
     padding: 14rem 0 1rem 0rem;
-   
+
     gap: 16px;
 
     a {
@@ -182,14 +189,14 @@
 
     .slider-content {
         display: flex;
-        gap: 56px;
+        gap: 16px;
         animation: slider-marquee 10s linear infinite;
         font-family: 'Karla', Arial, Helvetica, sans-serif;
         color: transparent;
-            text-shadow:
-                0ch 0 1px $primary-color,
-                78ch 0 1px $primary-color,
-                156ch 0 1px $primary-color;
+        text-shadow:
+            0ch 0 1px $primary-color,
+            78ch 0 1px $primary-color,
+            156ch 0 1px $primary-color;
     }
 }
 
@@ -202,12 +209,12 @@
     // 100% {
     //     transform: translateX(-50%);
     // }
-        to {
-            text-shadow:
-                -78ch 0 1px $primary-color,
-                0ch 0 1px $primary-color,
-                78ch 0 1px $primary-color;
-        }
+    to {
+        text-shadow:
+            -78ch 0 1px $primary-color,
+            0ch 0 1px $primary-color,
+            78ch 0 1px $primary-color;
+    }
 
 }
 
@@ -274,7 +281,7 @@
 
 
     .developer {
-        
+
         align-items: center;
         text-align: center;
 
@@ -302,7 +309,7 @@
 @media (max-width: 1024px) and (min-width: 768px) {
     .main-section {
         grid-template-columns: auto 1fr auto;
-        height: auto; 
+        height: auto;
         padding: 1rem;
     }
 
@@ -356,9 +363,11 @@
         padding: 1rem 0;
         gap: 0.5rem;
     }
- .left-lateral {
-     padding-left: 14px;
- }
+
+    .left-lateral {
+        padding-left: 14px;
+    }
+
     .slider {
         font-size: 18px;
         height: 48px;

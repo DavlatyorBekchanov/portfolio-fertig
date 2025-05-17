@@ -202,8 +202,9 @@
             width: fit-content;
             background-color: transparent;
             color: white;
+            overflow: hidden;
 
-            p {
+            .button-text {
                 text-shadow: 0 0 1px $primary-color, 29ch 0 1px $primary-color;
                 font-family: $font-karla;
                 font-size: 18px;
@@ -219,13 +220,42 @@
                 color: transparent;
                 transition: border-color 1s ease-in-out;
 
-                p {
+                span {
                     transition: text-shadow 4s ease-in-out;
                     animation: moveButtonText 2s linear infinite;
                 }
             }
+
+            // &:hover .button-text {
+            //     animation: rotateText 2s ease infinite;
+            //     white-space: nowrap;
+            //     color: #3dcfb6;
+            // }
+
+            // &:hover {
+            //     border-color: #3dcfb6;
+            //     transition: border-color 1s ease-in-out;
+
+            // }
         }
 
+        // @keyframes rotateText {
+        //     0% {
+        //         transform: translateX(0);
+        //     }
+
+        //     50% {
+        //         transform: translateX(-150%);
+        //     }
+
+        //     51% {
+        //         transform: translateX(500%);
+        //     }
+
+        //     100% {
+        //         transform: translateX(0);
+        //     }
+        // }
 
 
         .success-feedback {

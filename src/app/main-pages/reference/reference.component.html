@@ -23,7 +23,8 @@
     </div>
 
     <div class="slider-controls">
-        <button (click)="moveLeft()" class="arrow-btn">←</button>
+        <button (click)="moveLeft()" class="arrow-btn"
+            [style.visibility]="activeIndex === 0 ? 'hidden' : 'visible'">←</button>
 
         <div class="dots">
             <div #dotLeft class="dot" (click)="selectDot(0, 'dotLeft')"></div>
@@ -31,6 +32,7 @@
             <div #dotRight class="dot" (click)="selectDot(2, 'dotRight')"></div>
         </div>
 
-        <button (click)="moveRight()" class="arrow-btn">→</button>
+        <button (click)="moveRight()" class="arrow-btn"
+            [style.visibility]="activeIndex === reviews.length - 1 ? 'hidden' : 'visible'">→</button>
     </div>
 </div>
