@@ -18,7 +18,7 @@
         "workFlexi": "I'm flexible when it comes to work settings. Whether on-site in Dillingen an der Donau or remotely, I adapt easily and stay efficient in different environments. Collaboration and clear communication are important to me, no matter where I work.",
         "mindset":"I have an open mindset and always look for ways to improve my skills. I enjoy taking on challenges that push me to grow both professionally and personally.", 
         
-        "quality":"For me, programming is more than just writing code—it's about finding the best way to solve problems. I focus on turning complex ideas into simple, effective solutions that help users and businesses achieve their goals. I'm always open to interesting projects and new opportunities. Let’s connect!" 
+        "quality":"For me, programming is more than just writing code—it's about finding the best way to solve problems. I focus on turning complex ideas into simple, effective solutions that help users and businesses achieve their goals. I'm always open to interesting projects and new opportunities. Let's connect!" 
  },
  "reference":{
     "kollege":"What my colleagues say about me"
@@ -55,7 +55,7 @@
     "name": "What's your name?",
     "help":"How can I help you?",
     "email1":"What's your email?",
-    "privarcy":"I've read the privacy policy and agree to the processing of my data as outlined",
+    "privarcy":"I've read the <span class='privacy-link'>privacy policy</span> and agree to the processing of my data as outlined",
     "warning":{
         "name":"Oops! it seems your name is missing",
         "email":"Hoppla! your email is required",
@@ -82,8 +82,75 @@
       "text": "Working alongside Davlat was straightforward and effective. He approaches tasks with responsibility and stays calm even when deadlines are close. I would happily work with him again."
     }
   },
+  "privarcy":{
+    "policy": "Legal Notice",
+    "contact": "Contact",
+    "accountability": "Accountability"
+  },
   "footer":{
     "legal": "Legal Notice"
-  }
+  },
+
+ "data-privarcy":{
+  "privacyTitle": "Privacy Policy",
+  "privacySection1": "1. Privacy at a Glance",
+  "generalInfo": "General Information",
+  "generalInfoText": "The following information provides a simple overview of what happens to your personal data when you visit this website. Personal data is any data with which you could be personally identified. Detailed information on the subject of data protection can be found in our privacy policy listed below this text.",
+  "dataCollection": "Data Collection on this Website",
+  "dataController": "Who is responsible for data collection on this website?",
+  "dataControllerText": "The data processing on this website is carried out by the website operator. You can find their contact details in the section 'Note on the Responsible Party' in this privacy policy.",
+  "howWeCollect": "How do we collect your data?",
+  "howWeCollectText1": "Some data is collected when you provide it to us. This could, for example, be data you enter into a contact form.",
+  "howWeCollectText2": "Other data is collected automatically or with your consent when you visit the website by our IT systems. This is primarily technical data (e.g. internet browser, operating system, or time of page access). This data is collected automatically as soon as you enter this website.",
+  "dataUsage": "What do we use your data for?",
+  "dataUsageText": "Part of the data is collected to ensure the proper functioning of the website. Other data can be used to analyze how visitors use the site. If contracts can be concluded or initiated via the website, the transmitted data will also be processed for contract offers, orders or other requests.",
+  "yourRights": "What rights do you have regarding your data?",
+  "yourRightsText": "You have the right to receive information about the origin, recipient, and purpose of your stored personal data at any time, free of charge. You also have the right to request the correction or deletion of this data. If you have given consent to data processing, you can revoke this consent at any time for the future. You also have the right, under certain circumstances, to request the restriction of the processing of your personal data. Furthermore, you have the right to lodge a complaint with the competent supervisory authority. You can contact us at any time regarding this and other questions about data protection.",
+  "privacySection2": "2. Hosting",
+  "externalHosting": "External Hosting",
+  "externalHostingText1": "This website is hosted externally. The personal data collected on this website is stored on the hoster's servers. This may include IP addresses, contact requests, meta and communication data, contract data, contact details, names, website accesses, and other data generated via a website.",
+  "externalHostingText2": "External hosting is carried out for the purpose of fulfilling contracts with our potential and existing customers (Art. 6 para. 1 lit. b GDPR) and in the interest of a secure, fast, and efficient provision of our online offering by a professional provider (Art. 6 para. 1 lit. f GDPR).",
+  "externalHostingText3": "If a corresponding consent has been requested, the processing is carried out exclusively on the basis of Art. 6 para. 1 lit. a GDPR and § 25 para. 1 TTDSG, insofar as the consent includes the storage of cookies or access to information on the user's device (e.g. device fingerprinting) within the meaning of the TTDSG. The consent can be revoked at any time.",
+  "externalHostingText4": "Our host(s) will only process your data to the extent necessary to fulfill their performance obligations and will follow our instructions regarding this data.",
+  "privacySection3": "3. General Information and Mandatory Disclosures",
+  "dataProtection": "Data Protection",
+  "dataProtectionText1": "The operators of these pages take the protection of your personal data very seriously. We treat your personal data confidentially and in accordance with the statutory data protection regulations and this privacy policy.",
+  "dataProtectionText2": "When you use this website, various personal data are collected.",
+  "dataProtectionText3": "Personal data is data with which you can be personally identified. This privacy policy explains what data we collect and what we use it for. It also explains how and for what purpose this happens.",
+  "dataProtectionText4": "We point out that data transmission on the Internet (e.g. when communicating by e-mail) can have security gaps. A complete protection of data against access by third parties is not possible.",
+  "responsibleParty": "Note on the Responsible Party",
+  "responsiblePartyText1": "The responsible party for data processing on this website is:",
+  "responsiblePartyText2": "[Full name or complete company name of the website operator and complete address]",
+  "phone": "Phone: +491775524507",
+  "email": "Email: vireos.paladin_7z@icloud.com",
+  "responsiblePartyText3": "The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and means of processing personal data (e.g. names, email addresses, etc.).",
+  "storageDuration": "Storage Duration",
+  "storageDurationText": "Unless a more specific storage period has been specified within this privacy policy, your personal data will remain with us until the purpose for the data processing no longer applies. If you assert a legitimate request for deletion or revoke consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g. tax or commercial retention periods); in the latter case, the deletion will take place after these reasons no longer apply.",
+  "legalBasis": "General Information on the Legal Basis for Data Processing on this Website",
+  "legalBasisText": "If you have consented to data processing, we process your personal data on the basis of Art. 6 para. 1 lit. a GDPR or Art. 9 para. 2 lit. a GDPR, if special categories of data according to Art. 9 para. 1 GDPR are processed. In the case of explicit consent to the transfer of personal data to third countries, the data processing is also based on Art. 49 para. 1 lit. a GDPR. If you have consented to the storage of cookies or to the access to information on your device (e.g. via device fingerprinting), the data processing is additionally based on § 25 para. 1 TTDSG. The consent can be revoked at any time. If your data is required for the fulfillment of a contract or for the implementation of pre-contractual measures, we process your data on the basis of Art. 6 para. 1 lit. b GDPR. Furthermore, we process your data if this is necessary to fulfill a legal obligation on the basis of Art. 6 para. 1 lit. c GDPR. The data processing may also be carried out on the basis of our legitimate interest according to Art. 6 para. 1 lit. f GDPR. Information about the relevant legal basis in each individual case is provided in the following paragraphs of this privacy policy.",
+  "recipients": "Recipients of Personal Data",
+  "recipientsText": "As part of our business activities, we work with various external parties. In some cases, this also requires the transfer of personal data to these external parties. We only pass on personal data to external parties if this is necessary for the fulfillment of a contract, if we are legally obliged to do so (e.g. transfer of data to tax authorities), if we have a legitimate interest in the transfer pursuant to Art. 6 para. 1 lit. f GDPR, or if another legal basis permits the data transfer. When using processors, we only pass on personal data of our customers on the basis of a valid contract for order processing. In the case of joint processing, a contract for joint processing is concluded.",
+  "revokeConsent": "Revocation of Your Consent to Data Processing",
+  "revokeConsentText": "Many data processing operations are only possible with your express consent. You can revoke consent you have already given at any time. The legality of the data processing carried out until the revocation remains unaffected by the revocation.",
+  "objectRight": "Right to Object to Data Collection in Special Cases and to Direct Advertising (Art. 21 GDPR)",
+  "objectRightText1": "IF THE DATA PROCESSING IS BASED ON ART. 6 PARA. 1 LIT. E OR F GDPR, YOU HAVE THE RIGHT TO OBJECT TO THE PROCESSING OF YOUR PERSONAL DATA AT ANY TIME FOR REASONS ARISING FROM YOUR PARTICULAR SITUATION; THIS ALSO APPLIES TO PROFILING BASED ON THESE PROVISIONS. THE RESPECTIVE LEGAL BASIS ON WHICH PROCESSING IS BASED CAN BE FOUND IN THIS PRIVACY POLICY. IF YOU OBJECT, WE WILL NO LONGER PROCESS YOUR PERSONAL DATA UNLESS WE CAN DEMONSTRATE COMPELLING LEGITIMATE GROUNDS FOR THE PROCESSING THAT OVERRIDE YOUR INTERESTS, RIGHTS AND FREEDOMS, OR THE PROCESSING SERVES TO ASSERT, EXERCISE OR DEFEND LEGAL CLAIMS (OBJECTION PURSUANT TO ART. 21 PARA. 1 GDPR).",
+  "objectRightText2": "IF YOUR PERSONAL DATA IS PROCESSED FOR THE PURPOSE OF DIRECT MARKETING, YOU HAVE THE RIGHT TO OBJECT AT ANY TIME TO THE PROCESSING OF PERSONAL DATA CONCERNING YOU FOR THE PURPOSE OF SUCH MARKETING; THIS ALSO APPLIES TO PROFILING TO THE EXTENT THAT IT IS RELATED TO SUCH DIRECT MARKETING. IF YOU OBJECT, YOUR PERSONAL DATA WILL NO LONGER BE USED FOR THE PURPOSE OF DIRECT MARKETING (OBJECTION PURSUANT TO ART. 21 PARA. 2 GDPR).",
+  "complaintRight": "Right to Lodge a Complaint with the Competent Supervisory Authority",
+  "complaintRightText": "In the event of violations of the GDPR, data subjects have the right to lodge a complaint with a supervisory authority, in particular in the Member State of their habitual residence, their place of work or the place of the alleged infringement. The right to lodge a complaint exists without prejudice to other administrative or judicial remedies.",
+  "dataPortability": "Right to Data Portability",
+  "dataPortabilityText": "You have the right to have data that we process automatically on the basis of your consent or in fulfillment of a contract handed over to you or to a third party in a common, machine-readable format. If you request the direct transfer of the data to another controller, this will only be done insofar as it is technically feasible.",
+  "accessRectification": "Access, Rectification and Erasure",
+  "accessRectificationText": "Within the framework of the applicable legal provisions, you have the right at any time to free information about your stored personal data, its origin and recipient and the purpose of the data processing and, if applicable, a right to rectification or erasure of this data. For this purpose, as well as for further questions on the subject of personal data, you can contact us at any time.",
+  "restrictionRight": "Right to Restriction of Processing",
+  "restrictionRightText1": "You have the right to request the restriction of the processing of your personal data. For this purpose, you can contact us at any time. The right to restriction of processing exists in the following cases:",
+  "restrictionRightCase1": "If you dispute the accuracy of your personal data stored by us, we usually need time to verify this. For the duration of the verification, you have the right to request the restriction of the processing of your personal data.",
+  "restrictionRightCase2": "If the processing of your personal data was/is unlawful, you can request the restriction of data processing instead of erasure.",
+  "restrictionRightCase3": "If we no longer need your personal data, but you need it to exercise, defend or assert legal claims, you have the right to request the restriction of the processing of your personal data instead of erasure.",
+  "restrictionRightCase4": "If you have lodged an objection pursuant to Art. 21 para. 1 GDPR, a balancing of your and our interests must be carried out. As long as it has not yet been determined whose interests prevail, you have the right to request the restriction of the processing of your personal data.",
+  "restrictionRightText2": "If you have restricted the processing of your personal data, this data may - apart from being stored - only be processed with your consent or for the assertion, exercise or defense of legal claims or for the protection of the rights of another natural or legal person or for reasons of an important public interest of the European Union or a Member State."
 }
+}
+
+  
+
 

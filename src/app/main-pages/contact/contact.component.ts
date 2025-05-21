@@ -4,6 +4,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { NgIf } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 import emailjs from 'emailjs-com';
 
 @Component({
@@ -14,7 +15,11 @@ import emailjs from 'emailjs-com';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-  constructor(private renderer: Renderer2, el: ElementRef) {}
+  constructor(
+    private renderer: Renderer2,
+    el: ElementRef,
+    private router: Router
+  ) {}
 
   showSuccessMessage: boolean = false;
   privacyAccepted: boolean = false;
@@ -28,6 +33,10 @@ export class ContactComponent {
     email: '',
     message: '',
   };
+
+  openPrivacyPolicy() {
+    this.router.navigate(['/data-privarcy']);
+  }
 
   onSubmit(form: NgForm) {
     if (form.valid && this.privacyAccepted && !this.isTestMode) {
@@ -50,12 +59,9 @@ export class ContactComponent {
               this.showSuccessMessage = false;
             }, 3000);
           },
-          (error) => {
-            console.error('Xatolik yuz berdi:', error);
-          }
+          (error) => {}
         );
     } else if (form.valid && this.isTestMode) {
-      console.log('Test rejimi: Email yuborilmadi.');
       form.resetForm();
     }
   }

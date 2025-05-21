@@ -19,7 +19,7 @@
             <div class="input-group">
                 <input [(ngModel)]="formData.name" name="name" id="name" required minlength="2" #nameModel="ngModel"
                     placeholder="Your name goes here" />
-                <div *ngIf="showSuccessMessage && nameModel.invalid && nameModel.touched" class="validation-message">
+                <div *ngIf="nameModel.invalid && nameModel.touched" class="validation-message">
                     {{ 'contact.warning.name' | translate }}
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <input [(ngModel)]="formData.email" name="email" id="email" type="email" required
                     pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #emailModel="ngModel"
                     placeholder="youremail@mail.com" />
-                <div *ngIf="showSuccessMessage && emailModel.invalid && emailModel.touched" class="validation-message">
+                <div *ngIf="emailModel.invalid && emailModel.touched" class="validation-message">
                     {{ 'contact.warning.email' | translate }}
                 </div>
             </div>
@@ -44,8 +44,7 @@
             <div class="input-group">
                 <textarea [(ngModel)]="formData.message" name="message" id="message" rows="3" required minlength="5"
                     #messageModel="ngModel" placeholder="Hello Davlat, I am interested in..."></textarea>
-                <div *ngIf="showSuccessMessage && messageModel.invalid && messageModel.touched"
-                    class="validation-message">
+                <div *ngIf="messageModel.invalid && messageModel.touched" class="validation-message">
                     {{ 'contact.warning.message' | translate }}
                 </div>
             </div>
@@ -54,7 +53,7 @@
             <label class="checkbox-wrapper">
                 <input class="checkbox" type="checkbox" name="privacyPolicy" [(ngModel)]="privacyAccepted" />
                 <span class="checkbox-custom"></span>
-                <p>{{"contact.privarcy" | translate}}</p>
+                <p class="checkbox-text" [innerHTML]="'contact.privarcy' | translate" (click)="openPrivacyPolicy()"></p>
             </label>
 
             <!-- Submit button -->
