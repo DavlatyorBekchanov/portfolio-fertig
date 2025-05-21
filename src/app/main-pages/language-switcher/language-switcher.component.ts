@@ -9,14 +9,14 @@ import { LanguageService } from '../../../language.service';
   styleUrl: './language-switcher.component.scss',
 })
 export class LanguageSwitcherComponent {
-  isEnglish: boolean = true;
-  isGerman: boolean = false;
+  isEnglish: boolean = false;
+  isGerman: boolean = true;
 
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['en', 'de']);
-    this.translate.setDefaultLang('en');
+    this.translate.setDefaultLang('de');
     this.translate.get('header.aboutMe').subscribe((value) => {});
-    this.translate.use('en');
+    this.translate.use('de');
   }
 
   selectLanguage(language: string): void {

@@ -9,8 +9,8 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    // overflow-y: auto;
-
+    overflow-y: auto;
+    padding: 20px;
 }
 
 .dialog-container {
@@ -229,31 +229,103 @@
 
 @media (max-width: 600px) {
     .dialog-overlay {
-        padding: 32px 4px;
-        overflow-y: auto;
+        padding: 10px;
         align-items: flex-start;
-        max-height: 95vh;
+        height: 100%;
     }
 
     .dialog-container {
-        padding: 1rem 0.5rem;
-    }
-
-    .dialog-right img {
+        padding: 16px;
+        gap: 16px;
         width: 100%;
+        margin: 10px 0;
     }
 
-    .project-links button {
-        min-width: 125px;
+    .dialog-right {
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    .dialog-left {
+        >h2 {
+            font-size: 42px;
+            line-height: 1.2;
+        }
     }
 
     .project-title {
-        font-size: 48px;
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .project-description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .project-tech-list {
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .project-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+
+        button {
+            min-width: 110px;
+            font-size: 14px;
+            padding: 8px 12px;
+            height: 40px;
+        }
     }
 }
 
 @media (max-width: 400px) {
+    .dialog-overlay {
+        padding: 5px;
+    }
+
     .dialog-container {
-        position: static;
+        padding: 12px;
+        gap: 12px;
+        border-radius: 12px;
+    }
+
+    .dialog-left {
+        >h2 {
+            font-size: 36px;
+        }
+    }
+
+    .project-title {
+        font-size: 28px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+
+    .project-tech-list {
+        font-size: 13px;
+    }
+
+    .project-links {
+        button {
+            min-width: 100px;
+            font-size: 13px;
+            padding: 6px 10px;
+            height: 36px;
+        }
+    }
+
+    .next-project-btn-mobile {
+        font-size: 12px;
+        padding-top: 18px;
+        align-self: center;
     }
 }
